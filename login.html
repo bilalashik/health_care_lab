@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-box">
+          <img src="img/12345.jpg" alt="img" width="90px" height="50px">
+           <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search For Lab Tests/Packages">
+        </div>
+         
+        <div>
+            <h4>Home Collection</h4>
+            <span>9047839066</span>
+        </div>
+          <a href="about">About</a>
+          <a href="./intex.html" class="login">Home</a>
+</header>
+<nav>
+    <div class="nav-box">
+        <ul class="menu">
+            <li class="item">
+                Health Risks
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="dropdown">
+                     <a href="./Healthrisk/heart.html">Heart</a>
+                    <a href="./Healthrisk/thyroid.html">Thyroid</a>
+                    <a href="./Healthrisk/liver.html">Liver</a>
+                    <a href="./Healthrisk/kidney.html">Kidney</a>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="menu">
+            <li class="item">
+                Health Conditions
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="dropdown">
+                    <a href="heart">Diabetes</a>
+                    <a href="thyroid">Alcohol</a>
+                    <a href="liver">Hypertension</a>
+                    <a href="kidney">Gut Health</a>
+                    <a href="thyroid">Depression</a>
+                    <a href="liver">Obesity</a>
+                    <a href="kidney">Sleep Disorder</a>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="menu">
+            <li class="item">
+                Health Check Packages
+                <i class="fa-solid fa-chevron-down"></i>
+                <div class="dropdown">
+                    <a href="./Healthpackages/allpackages.html">All Packages</a>
+                    <a href="./Healthpackages/lifestyle.html">Lifestyle Package</a>
+                    <a href="./Healthpackages/menpkg.html">Men Health</a>
+                    <a href="./Healthpackages/women.html">Women Health</a>
+                </div>
+            </li>
+        </ul>
+        <ul>
+            <li><a href="./Services/Services.html" class="Services">Services</a></li>
+        </ul>
+        <ul>
+            <li>
+                <i class="fa-solid fa-circle-down"></i>
+                Download Report
+            </li>
+        </ul>
+    </div> 
+</nav>
+<main>
+    
+     <div class="container">
+    
+        <section class="image-section">
+            <img src="./img/Screenshot 2026-09-20 161511.png" alt="Doctor Consultation" class="doctor-image">
+        </section>
+
+    
+        <section class="form-section">
+            <form class="appointment-form">
+        
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <label for="firstName" class="form-label">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" class="input-text" placeholder="" >
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="lastName" class="form-label">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" class="input-text" placeholder="" >
+                    </div>
+                </div>
+
+    
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <label for="phone" class="form-label">Phone <span class="required">*</span></label>
+                        <input type="tel" id="phone" class="input-ph" placeholder="">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="email" class="form-label">Email <span class="required">*</span></label>
+                        <input type="email" id="email" class="input-email" placeholder="" required>
+                    </div>
+                </div>
+
+            
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <label for="gender" class="form-label">Gender <span class="required">*</span></label>
+                        <select id="gender" class="input-select">
+                            <option value="">-Select-</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="age" class="form-label">Age <span class="required">*</span></label>
+                        <input type="text" id="age" class="input-text" placeholder="">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" id="city" class="input-text" placeholder="">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="postal" class="form-label">Postal Code <span class="required">*</span></label>
+                        <input type="text" id="postal" class="input-text" placeholder="" required>
+                    </div>
+                </div>
+
+                <div class="form-group full">
+                    <div class="input-wrapper">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea id="description" class="input-textarea" placeholder=""></textarea>
+                    </div>
+                </div>
+
+                <div class="button-wrapper">
+                    <button type="submit" class="btn-submit">Book Now</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <section>
+    <div class="book-test">
+        <div class="book-text">
+            <h2>Book a Test or</h2>
+            <h2>Schedule Home Collection</h2>
+            <p>Your health,our priority.</p>
+        </div>
+        <div class="book-button">
+            <button>BOOK A TEST</button>
+            <button>SCHEDULE COLLECTION</button>
+        </div>
+    </div>
+</section>
+<section>
+ <div class="main-why-book">
+        <h2>Why Book Tests With us?</h2>
+        <p>Trusted by 90 Lakhs+ satisfied customers</p>
+  <div class="why-book">
+        <div class="why-book-box">
+            <img src="././img/Icono De Línea De Calidad PNG ,dibujos  Certificado, Controlar, Garantía PNG y Vector para Descargar Gratis _ Pngtree.jpg" alt="img" width="70px" height="70px" style="margin: 20px 20px;"><hr>
+        <div class="why-text">
+            <h2>Quality</h2>
+            <h5>Follow Stringent</h5>
+            <h5>Quality Control</h5>
+        </div>
+        </div>
+
+        <div class="why-book-box">
+            <img src="./img/Time Management free icons designed by Uniconlabs.jpg" alt="img" width="70px" height="70px" style="margin: 20px 20px;"><hr>
+         <div class="why-text">
+            <h2>On-Time Services</h2>
+            <h5>Sample Collection</h5>
+            <h5>& Reports</h5>
+        </div>
+        </div>
+        <div class="why-book-box">
+            <img src="./img/Dependable free icons designed by Uniconlabs.jpg" alt="img" width="70px" height="70px" style="margin: 20px 20px;"><hr>
+        <div class="why-text">
+            <h2>Convenience</h2>
+            <h5>At-Home & in-Lab</h5>
+            <h5>Services</h5>
+        </div>   
+        </div>
+        <div class="why-book-box">
+            <img src="./img/download (32).jpg" alt="img"  width="70px" height="70px" style="margin: 20px 20px;"><hr>
+        <div class="why-text">
+            <h2>Availability</h2>
+            <h5>365 days a</h5>
+            <h5>year</h5>
+        </div>
+        </div>
+</div>
+    </div>
+</section>
+<section>
+    <div class="support">
+        <div class="support-box">
+            <h2>10+</h2>
+            <h4>Years Experience</h4>
+        </div>
+        <div class="support-box">
+            <h2>20+</h2>
+            <h4>Specialist Doctors </h4>
+        </div>
+        <div class="support-box">
+            <h2>2,000+</h2>
+            <h4>customer Done</h4>
+        </div>
+        <div class="support-box">
+        <h2>24/7</h2>
+        <h4>Support</h4>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+
+    <div class="footer-col">
+      <h3>MediCare Diagnostics Lab</h3>
+      <p>Trusted diagnostics & lab testing services for your health.</p>
+    </div>
+
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about">About Us</a></li>
+        <li><a href="./Services/Services.html">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Email: <a href="anvermedical@medicarelab.com">anverMediCare@gmail.com</a></p>
+      <p>Phone: +91 9047839066</p>
+    </div>
+
+    
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://instagram.com/yourpage"  class="social-item">
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://youtube.com/yourchannel" class="social-item">
+          <span>YouTube</span>
+        </a>
+
+        <a href="https://linkedin.com/company/yourpage" class="social-item">
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>& 2026 MediCare Diagnostics Lab. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

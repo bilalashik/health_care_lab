@@ -1,0 +1,24 @@
+.condition{
+    width: 80%;
+    height: 400px;
+    background-color: #0d3b66;
+    margin-top: 200px;
+    margin-left: 50px;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+}
+.ph-main{
+    width: 60%;
+    padding-top: 80px;
+    padding-left: 50px;
+
+}
+.ph{
+    font-variant: small-caps;
+    color: white;
+     text-align-last: center;
+     font-size: 23px;
+}

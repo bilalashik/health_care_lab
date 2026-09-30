@@ -1,0 +1,29 @@
+.mainoffer{
+ background-image: url(../img/men\ image.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.lifestyle{
+    background-image: url(../img/famliy\ image.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.allpackage{
+    background-image: url(../img/all\ package.png);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+.booking1{
+       position: absolute;
+   top: 270px;
+   left: 55px;
+   font-size: 20px;
+   font-weight: bold;
+   background-color: rgb(244, 237, 27);
+   height: 50px;
+   width: 250px;
+   border-radius: 7px;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+}
