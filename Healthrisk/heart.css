@@ -6,14 +6,15 @@
 } 
 .page2{
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     /* border: 1px solid black; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     /* border-radius: 10px; */
     margin-top:  145px;
     background-image: url(../img/healthcare_banner_1200x200.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
     position: relative;
 }
 .page2 >h2{
@@ -37,8 +38,12 @@
 }
 .book-search{
     display: flex;
+    align-items: center;
+    gap: 20px;
     justify-content: space-between;
-    margin: 40px 80px; 
+    margin: 40px auto;
+    width: calc(100% - 40px);
+    max-width: 1300px;
 }
 .book-search >h2{
   font-size: 30px;
@@ -46,13 +51,16 @@
 }
 .test-main-box{
     display: grid;
-    gap: 40px;
-    grid-template-columns: repeat(4,1fr);
-    margin: 50px 10px;
+    gap: clamp(16px, 3vw, 32px);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    width: calc(100% - 40px);
+    max-width: 1300px;
+    margin: 40px auto;
 }
 .boold-box{
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    min-width: 0;
+    min-height: 400px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 7px;
     position: relative;
@@ -78,19 +86,22 @@
 }
 .box5{
    display: grid;
-   grid-template-columns: repeat(5,1fr);
-   margin: 30px 20px;
-   gap: 10px;
+   grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+   width: calc(100% - 40px);
+   max-width: 1300px;
+   margin: 30px auto;
+   gap: 20px;
 }
 .steps5-container{
-    margin-top: 60px;
+    margin: 40px auto 0;
 }
 .steps-box-5{
        box-shadow: 0 4px 15px rgba(0,0,0,0.4);  
        /* border: 1px solid rgb(106, 102, 102); */
       border-radius: 7px;
-      height: 300px;
-      width: 250px;
+      min-height: 300px;
+      min-width: 0;
+      padding: 12px;
       background: linear-gradient(342deg, #ffffff 4%, #adc4d2 60%);
       overflow: hidden;
   animation: boxmove 1s ease-in-out;
@@ -109,8 +120,10 @@
 
 }
 .steps5-container >h3{
-    margin: 20px 20px;
-    font-size: 30px;
+    margin: 20px auto;
+    width: calc(100% - 40px);
+    max-width: 1300px;
+    font-size: clamp(23px, 3vw, 30px);
     font-style: initial;
     font-family:sans-serif;
     /* font-family: 'Segoe UI', Arial, sans-serif; */
@@ -121,8 +134,10 @@
   animation-range: entry 0% cover 40%;
 }
 .steps5-container >p{
-     margin: 20px 20px;
-     font-size: 20px;
+     margin: 20px auto;
+     width: calc(100% - 40px);
+     max-width: 1300px;
+     font-size: clamp(16px, 2vw, 20px);
      font-family: serif;
        overflow: hidden;
   animation: content 1s ease-in-out;
@@ -141,7 +156,74 @@
     margin: 7px 10px;
     color: rgb(86, 83, 83);
 }
+.steps-box-5 img {
+    display: block;
+    width: min(100%, 200px);
+    height: auto;
+    margin: 8px auto 16px !important;
+    border-radius: 10px;
+}
 .steps-box-5:hover{
     border: 1px solid rgb(106, 102, 102); 
      /* box-shadow: 0 4px 15px rgba(0,0,0,0.4);  */
+}
+
+@media (max-width: 1024px) {
+    .page2 {
+        min-height: clamp(160px, 24vw, 220px);
+        margin-top: 24px;
+    }
+
+    .page2 > h2,
+    .page2 > p {
+        left: clamp(20px, 5vw, 50px);
+    }
+
+    .page2 > h2 {
+        top: 28%;
+    }
+
+    .page2 > p {
+        top: 52%;
+        font-size: clamp(18px, 3vw, 25px);
+    }
+}
+
+@media (max-width: 768px) {
+    .book-search {
+        flex-wrap: wrap;
+        margin: 24px auto;
+    }
+
+    .book-search > h2 {
+        font-size: clamp(22px, 5vw, 28px);
+    }
+
+    .book-search .search {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .test-main-box,
+    .box5 {
+        width: calc(100% - 32px);
+    }
+
+    .steps5-container {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page2 > h2 {
+        font-size: 21px;
+    }
+
+    .page2 > p {
+        font-size: 17px;
+    }
+
+    .boold-box {
+        min-height: 390px;
+    }
 }

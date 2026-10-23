@@ -4,6 +4,17 @@
   box-sizing: border-box;
   list-style-type: none;
 }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-width: 320px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 .header-box {
   width: 100%;
   display: flex;
@@ -44,7 +55,7 @@
 }
 #call{
   position: absolute;
-  left: 670px;
+  left: 820px;
 }
 .login {
   background-color: #862d45;
@@ -64,10 +75,11 @@ nav {
 .nav-box {
   display: flex;
   width: 100%;
+  height: 80px;
   justify-content: space-evenly;
   align-items: center;
   gap: 30px;
-  padding: 15px 40px;
+  padding: 15px 50px;
   /* margin-top: 60px; */
   position: fixed;
   top: 80px;
@@ -83,6 +95,7 @@ nav {
   cursor: pointer;
   font-weight: 700;
   color: #333;
+  margin-top: 20px;
   padding: 10px 0;
   color: white;
   font-family: Geneva, Tahoma, sans-serif;
@@ -108,6 +121,9 @@ nav {
 .item:hover .dropdown {
   display: flex;
 }
+.item:focus-within .dropdown {
+  display: flex;
+}
 .dropdown a {
   text-decoration: none;
   color: #444;
@@ -124,14 +140,14 @@ a {
 .Services{
   font-size: 17px;
   font-family: Geneva, Tahoma, sans-serif;
+  margin-top: 30px;
    font-weight: 600;
 }
 .slider {
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 1300px;
-   height: 450px; 
-  margin-top: 160px;
-  margin-left: 20px;
+  height: 450px;
+  margin: 160px auto 0;
   overflow: hidden; 
   position: relative;
   border-radius: 16px;
@@ -182,9 +198,9 @@ a {
   }
 }
 .help {
-  width: 97%;
-margin-top: 40px;
-margin-left: 20px;
+  width: calc(100% - 40px);
+  max-width: 1300px;
+  margin: 40px auto 0;
   height: 200px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
@@ -266,12 +282,12 @@ margin-left: 20px;
 } */
 .scroll-box {
   display: flex;
-  gap: 10px;
-  height: 80vh;
+  max-width: 100%;
+  height: auto;
   align-items: center;
   gap: 50px;
   padding: 25px;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 .scroll-box::-webkit-scrollbar {
   display: none;
@@ -410,10 +426,11 @@ section > h2 {
   }
 }
 .main-why-book {
-  width: 97%;
+  width: calc(100% - 40px);
+  max-width: 1300px;
   height: 450px;
   margin-top: 40px;
-  margin-left: 20px;
+  margin-inline: auto;
    background-color: #b14359;
   border-radius: 10px;
   position: relative;
@@ -587,34 +604,35 @@ section > h2 {
 }
 
 @media (max-width: 1366px) {
-  .search { width: 400px; }
-  #call { margin-left: 150px; }
-
-  .slider { width: calc(100% - 40px); }
-
+  .search { width: clamp(260px, 30vw, 400px); }
   .why-book { justify-content: center; gap: 20px; }
   .why-book-box { margin: 110px 12px; }
-
   .support-box { width: 250px; }
 }
 
 @media (max-width: 1024px) {
-  html, body { overflow-x: hidden; }
-
-
-  .search { width: 260px; }
+  .header-box {
+    position: static;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+  }
+  .search { width: clamp(260px, 40vw, 400px); }
   #call { position: static; margin-left: 0; font-size: 18px; }
-
-
-  .nav-box { padding: 12px 12px; gap: 12px; font-size: 14px; }
+  .nav-box {
+    position: static;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 16px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
   .Services { font-size: 14px; }
-
-
-  .slider { height: 350px; }
-
+  .slider { height: clamp(220px, 38vw, 350px); margin-top: 20px; }
 
   .help {
-    width: calc(100% - 40px);
     height: auto;
     flex-direction: column;
     padding: 70px 20px 20px;
@@ -623,9 +641,7 @@ section > h2 {
   .help-box { width: 100%; height: 90px; margin: 8px 0; }
   .help-text2 { right: 10px; }
 
-
   .main-why-book {
-    width: calc(100% - 40px);
     height: auto;
     padding: 25px 0 30px;
   }
@@ -648,15 +664,8 @@ section > h2 {
 }
 
 @media (max-width: 768px) {
-
-
   .header-box {
-    position: static;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
+    padding: 10px 16px;
   }
   .search { order: 3; width: 100%; }
   #call { display: none; }
@@ -664,15 +673,12 @@ section > h2 {
   .header-box span { font-size: 12px; }
   .login { width: 80px; height: 36px; padding-top: 8px; font-size: 14px; }
 
-
   .nav-box {
-    position: static;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px 14px;
-    padding: 8px 10px;
+    gap: 6px 12px;
+    padding: 10px 16px;
     font-size: 13px;
   }
+  .nav-box > ul { min-width: 0; }
   .Services { font-size: 13px; }
   .dropdown { min-width: 150px; max-width: 85vw; padding: 10px 14px; }
   .nav-box .menu:nth-child(2) .dropdown,
@@ -680,23 +686,22 @@ section > h2 {
 
 
   .slider {
-    height: 200px;
-    width: calc(100% - 20px);
-    margin: 12px 10px 0;
+    height: clamp(150px, 42vw, 220px);
+    width: calc(100% - 32px);
+    margin: 12px auto 0;
     border-radius: 10px;
   }
 
-
-  .help { width: calc(100% - 20px); margin: 30px 10px 0; padding: 60px 12px 12px; }
+  .help { width: calc(100% - 32px); margin: 30px auto 0; padding: 60px 12px 12px; }
   .helptext { font-size: 22px; left: 20px; }
   .help-icon { margin: 10px 15px; }
   .help-text1 { font-size: 15px; top: 14px; left: 75px; }
   .help-text2 { font-size: 12px; top: 42px; left: 75px; right: 8px; }
 
-
-  section > h2 { margin-left: 15px; margin-top: 25px; font-size: 22px; }
-  .scroll-box { height: auto; gap: 20px; padding: 30px 15px; }
+  section > h2 { margin: 25px 16px 0; font-size: 22px; }
+  .scroll-box { gap: 20px; padding: 24px 16px; scroll-snap-type: x mandatory; }
   .box { margin-top: 20px; }
+  .scroll-box .box { scroll-snap-align: start; }
 
   .book-test {
     flex-direction: column;
@@ -713,12 +718,10 @@ section > h2 {
     margin-bottom: 12px;
   }
 
-
-  .main-why-book { width: calc(100% - 20px); margin-left: 10px; }
+  .main-why-book { width: calc(100% - 32px); margin: 30px auto 0; }
   .main-why-book > h2 { font-size: 22px; }
   .why-book { flex-direction: column; align-items: center; gap: 0; }
   .why-book-box { margin: 10px 0; }
-
 
   .support {
     flex-direction: column;
@@ -729,7 +732,7 @@ section > h2 {
   }
   .support-box { width: 80%; }
 
-  .site-footer { margin-top: 40px; }
+  .site-footer { margin-top: 40px; padding: 32px 16px 16px; }
   .footer-container { flex-direction: column; gap: 20px; text-align: center; }
   .footer-col { min-width: 100%; }
   .footer-col h4 { font-size: 18px; }
@@ -742,8 +745,13 @@ section > h2 {
   .header-box img { width: 70px; height: 40px; }
   .nav-box { font-size: 12px; gap: 6px 10px; }
   .Services { font-size: 12px; }
-  .slider { height: 170px; }
-  .help-text1 { font-size: 14px; }
+  .slider { height: clamp(140px, 48vw, 190px); }
+  .help { padding-inline: 10px; }
+  .help-text1 { left: 68px; font-size: 14px; }
+  .help-text2 { left: 68px; }
   .book-text { font-size: 16px; }
+  .main-why-book { padding: 22px 12px 24px; }
+  .why-book-box { width: min(100%, 250px); }
+  .support { padding-inline: 16px; }
   .support-box { width: 90%; }
 }

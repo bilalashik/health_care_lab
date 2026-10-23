@@ -14,8 +14,8 @@
  background-size: cover;
 }
 .booking1{
-       position: absolute;
-   top: 270px;
+     position: absolute;
+   top: 275px;
    left: 55px;
    font-size: 20px;
    font-weight: bold;
@@ -26,4 +26,11 @@
    display: grid;
    justify-content: center;
    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .booking1 {
+        top: auto;
+        bottom: 20px;
+    }
 }
